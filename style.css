@@ -3,17 +3,20 @@ font-family: 'Boogaloo', cursive; */
 
 body {
     font-family: 'Boogaloo', cursive;}
+button {
+    font-size: 20px;
+}
 
-.grid-container {
+.main-grid {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     grid-template-rows: 80px 200px 200px 200px;
     justify-content: space-evenly;
     text-align: center;
-    background-color: blue;
-    color: white;
     font-size: 35px;
+
 }
-container {
-    border-color: white;
+div.tile {
+    background-color: blue;
 }
+

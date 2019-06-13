@@ -70,26 +70,66 @@ $(document).ready(function () {
         value: "100",
         question: "What is the answer?",
         attempted: false,
-        correctAnswer: "This is the correcct answer!",
-        incorrectAnswers: [
-            "This one is wrong.",
-            "Also wrong!",
-            "Nope not this one either!"
-        ]
-    }
-    sci100 = {
-        category: "science",
-        value: "100",
-        question: "What is the answer?",
-        attempted: false,
-        correctAnswer: "This is the correcct answer!",
-        incorrectAnswers: [
-            "This one is wrong.",
-            "Also wrong!",
-            "Nope not this one either!"
-        ]
+        answers: {
+            t: ['This is the correct answer!'],
+            f: ["This one is wrong.",
+                "Also wrong!",
+                "Nope not this one either!"
+            ]
+        }
     }
 
+    questions = {
+        categories: [
+            "firstCat",
+            "secondCat",
+            "thirdCat",
+            "fourthCat"
+        ],
+        values: [
+            "100",
+            "200",
+            "300",
+            "400",
+        ]
+
+    }
+
+    // sci200 = {
+    //     category: "science",
+    //     value: "200",
+    //     question: "What is the answer here?",
+    //     attempted: false,
+    //     correctAnswer: "This is the correct answer!",
+    //     incorrectAnswers: [
+    //         "This one is wrong.",
+    //         "Also wrong!",
+    //         "Nope not this one either!"
+    //     ]
+    // }
+    //Use this to display answers??:
+
+    // console.log(sci100.answers.t)
+    // for (i = 0; i < sci100.answers.f.length; i++) {
+    //     console.log(sci100.answers.f[i])
+    // }
+    
+
+
+//working with dynamically adding boxes for the grid
+
+$('button').on('click', function(evt) {
+    evt.preventDefault()
+    console.log('clicked')
+    for(let i = 0; i <9; i++){
+$('.main-grid').append("<div class = 'tile'></div>")
+
+// $('ul').append('Denim jumpsuit');
+}
+
+
+
+})
 
     // for(let i = 0; i < 5; i++) {
     //     let btn = document.createElement('button');
@@ -113,5 +153,3 @@ $(document).ready(function () {
     // }
 
 })
-
-
