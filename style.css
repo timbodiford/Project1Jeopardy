@@ -1,0 +1,11 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 80px 200px 200px 200px;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: blue;
+    color: white;
+    font-size: 35px;
+
+  }
