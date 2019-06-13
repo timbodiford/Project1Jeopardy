@@ -1,3 +1,9 @@
+/* font-family: 'Anton', sans-serif;
+font-family: 'Boogaloo', cursive; */
+
+body {
+    font-family: 'Boogaloo', cursive;}
+
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -7,5 +13,7 @@
     background-color: blue;
     color: white;
     font-size: 35px;
-
-  }
+}
+container {
+    border-color: white;
+}
