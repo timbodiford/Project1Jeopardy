@@ -8,83 +8,109 @@
 $(document).ready(function () {
 
 
-// var categories = [
-//     "HTML",
-//     "JS"
-// ]
-// var tilevalueS = [
-//     "100",
-//     "300",
-//     "500"
-// ]
+    // var categories = [
+    //     "HTML",
+    //     "JS"
+    // ]
+    // var tilevalueS = [
+    //     "100",
+    //     "300",
+    //     "500"
+    // ]
 
-// var questions = {
-//     true: "Correct",
-//     false: "Not correct",
-//     false: "Not correct",
-// }
-
-
-// //this doesn't tie questions to a specific category or value..  i think i need to nest.. refer to the planets object...
+    // var questions = {
+    //     true: "Correct",
+    //     false: "Not correct",
+    //     false: "Not correct",
+    // }
 
 
+    // //this doesn't tie questions to a specific category or value..  i think i need to nest.. refer to the planets object...
 
 
-var science = {
-    values: {
-        onHundred: {
-            question: "Which is correct?",
-            trueAnswer: "correct Question",
-            falseAnswers: [
-                "This question is false",
-                "Here's another false question",
-                "Yep, also false"
-            ],
-            attempted: false
-        },
-        twoHundred: {
-            question: "Which is correct?",
-            trueAnswer: "correct Question",
-            falseAnswers: [
-                "This question is false",
-                "Here's another false question",
-                "Yep, also false"
-            ],
-            attempted: false
-        },
-        threeHundred: {
-            question: "Which is correct?",
-            trueAnswer: 'correct Question',
-            falseAnswers: [
-                "This question is false",
-                "Here's another false question",
-                "Yep, also false"
-            ],
-            attempted: false
-        }
+
+
+    // var science = {
+    //     values: {
+    //         onHundred: {
+    //             question: "Which is correct?",
+    //             trueAnswer: "correct Question",
+    //             falseAnswers: [
+    //                 "This question is false",
+    //                 "Here's another false question",
+    //                 "Yep, also false"
+    //             ],
+    //             attempted: false
+    //         },
+    //         twoHundred: {
+    //             question: "Which is correct?",
+    //             trueAnswer: "correct Question",
+    //             falseAnswers: [
+    //                 "This question is false",
+    //                 "Here's another false question",
+    //                 "Yep, also false"
+    //             ],
+    //             attempted: false
+    //         },
+    //         threeHundred: {
+    //             question: "Which is correct?",
+    //             trueAnswer: 'correct Question',
+    //             falseAnswers: [
+    //                 "This question is false",
+    //                 "Here's another false question",
+    //                 "Yep, also false"
+    //             ],
+    //             attempted: false
+    //         }
+    //     }
+    // }
+
+    sci100 = {
+        category: "science",
+        value: "100",
+        question: "What is the answer?",
+        attempted: false,
+        correctAnswer: "This is the correcct answer!",
+        incorrectAnswers: [
+            "This one is wrong.",
+            "Also wrong!",
+            "Nope not this one either!"
+        ]
     }
-}
-
-// for(let i = 0; i < 5; i++) {
-//     let btn = document.createElement('button');
-//     btn.classList.add('square');
-//     main-Container.appendChild(btn);
-//     btn.appendChild(document.createTextNode('$100'))
-// }
-
-
-// function createDiv () {
-//     $('main-Container').append('<div class="category-tiles"')
-// }
-
+    sci100 = {
+        category: "science",
+        value: "100",
+        question: "What is the answer?",
+        attempted: false,
+        correctAnswer: "This is the correcct answer!",
+        incorrectAnswers: [
+            "This one is wrong.",
+            "Also wrong!",
+            "Nope not this one either!"
+        ]
+    }
 
 
+    // for(let i = 0; i < 5; i++) {
+    //     let btn = document.createElement('button');
+    //     btn.classList.add('square');
+    //     main-Container.appendChild(btn);
+    //     btn.appendChild(document.createTextNode('$100'))
+    // }
 
-// for(let i = 0; i < 25; i++) {
-//    let btn = document.createElement('div');
-//    btn.classList.add('tile');
-//    gameBoard.appendChild(btn);
-// }
+
+    // function createDiv () {
+    //     $('main-Container').append('<div class="category-tiles"')
+    // }
+
+
+
+
+    // for(let i = 0; i < 25; i++) {
+    //    let btn = document.createElement('div');
+    //    btn.classList.add('tile');
+    //    gameBoard.appendChild(btn);
+    // }
 
 })
 
