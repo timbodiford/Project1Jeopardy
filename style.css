@@ -24,7 +24,15 @@ button {
     background-color: blue;
     padding: 10px;
 }
-.question-tile {
+.question-tile-100{
+    background-color: blue;
+    padding: 10px;
+}
+.question-tile-200{
+    background-color: blue;
+    padding: 10px;
+}
+.question-tile-300{
     background-color: blue;
     padding: 10px;
 }

@@ -78,6 +78,9 @@ $(document).ready(function () {
             ]
         }
     }
+// let sc100Answers = sci100.answers
+// ($('div.question-tile-100').eq(i).text(questions.values[0]))
+
 
     questions = {
         categories: [
@@ -113,32 +116,63 @@ $(document).ready(function () {
     // for (i = 0; i < sci100.answers.f.length; i++) {
     //     console.log(sci100.answers.f[i])
     // }
-    
 
 
-//working with dynamically adding boxes for the grid
-//click event
-$('button').on('click', function(evt) {
-    evt.preventDefault()
-    console.log('clicked')
-//adding category tiles
-    for(let i = 0; i <4; i++){
-$('.main-grid').append("<div class = 'cat-tile'></div>")
-}
-//adding question tiles
-for(let i = 0; i <12; i++){
-$('.main-grid').append("<div class = 'question-tile'></div>")
-}
 
-let catVar = questions.categories[i]
+    //working with dynamically adding boxes for the grid
+    //click event
+    $('button').on('click', function (evt) {
+        evt.preventDefault()
+        console.log('clicked')
+        //adding category tiles
+        for (let i = 0; i < 4; i++) {
+            $('.main-grid').append("<div class = 'cat-tile'></div>")
+        }
+        //adding values tiles
+        for (let i = 0; i < 4; i++) {
+            $('.main-grid').append("<div class = 'question-tile-100'></div>")
+        }
+        for (let i = 0; i < 4; i++) {
+            $('.main-grid').append("<div class = 'question-tile-200'></div>")
+        }
+        for (let i = 0; i < 4; i++) {
+            $('.main-grid').append("<div class = 'question-tile-300'></div>")
+        }
 
-//pushing data into divs
-for(let i = 0; i < 4; i++){
-($('div.cat-tile').eq(i).text(catVar))
-}
-}
-)
- 
+        //pushing data into category divs
+        for (let i = 0; i < questions.categories.length; i++) {
+            ($('div.cat-tile').eq(i).text(questions.categories[i]))
+        }
+        //pushing data into category divs
+        for (let i = 0; i < questions.values.length; i++) {
+            ($('div.question-tile-100').eq(i).text(questions.values[0]))
+        }
+
+        //pushing data into category divs
+        for (let i = 0; i < questions.values.length; i++) {
+            ($('div.question-tile-200').eq(i).text(questions.values[1]))
+        }
+        //pushing data into category divs
+        for (let i = 0; i < questions.values.length; i++) {
+            ($('div.question-tile-300').eq(i).text(questions.values[2]))
+        }
+
+
+
+
+
+
+//This isn't going to work because it's trying to start from position one ands overwriting the 100 values
+//How do I loop the loop? 100 100 100 100 / 200 200 200 200 / 300 300 300 300, etc?
+
+//Or do I create separate rows with a separate class for each $$$ amt?
+
+
+
+
+    }
+    )
+
 
 
     // for(let i = 0; i < 5; i++) {
