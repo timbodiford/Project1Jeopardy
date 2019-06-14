@@ -24,15 +24,19 @@ button {
     background-color: blue;
     padding: 10px;
 }
-.question-tile-100{
+div.tile-100{
     background-color: blue;
     padding: 10px;
 }
-.question-tile-200{
+div.tile-200{
     background-color: blue;
     padding: 10px;
 }
-.question-tile-300{
+div.tile-300{
+    background-color: blue;
+    padding: 10px;
+}
+div.tile-400{
     background-color: blue;
     padding: 10px;
 }
