@@ -10,13 +10,21 @@ button {
 .main-grid {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    grid-template-rows: 80px 200px 200px 200px;
-    justify-content: space-evenly;
+    grid-template-rows: 60px 100px 100px 100px 100px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    /* /* justify-content: space-evenly; */
     text-align: center;
     font-size: 35px;
+    color: white;
+
 
 }
-div.tile {
+.cat-tile{
     background-color: blue;
+    padding: 10px;
 }
-
+.question-tile {
+    background-color: blue;
+    padding: 10px;
+}

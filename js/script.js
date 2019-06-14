@@ -117,19 +117,29 @@ $(document).ready(function () {
 
 
 //working with dynamically adding boxes for the grid
-
+//click event
 $('button').on('click', function(evt) {
     evt.preventDefault()
     console.log('clicked')
-    for(let i = 0; i <9; i++){
-$('.main-grid').append("<div class = 'tile'></div>")
-
-// $('ul').append('Denim jumpsuit');
+//adding category tiles
+    for(let i = 0; i <4; i++){
+$('.main-grid').append("<div class = 'cat-tile'></div>")
+}
+//adding question tiles
+for(let i = 0; i <12; i++){
+$('.main-grid').append("<div class = 'question-tile'></div>")
 }
 
+let catVar = questions.categories[i]
 
+//pushing data into divs
+for(let i = 0; i < 4; i++){
+($('div.cat-tile').eq(i).text(catVar))
+}
+}
+)
+ 
 
-})
 
     // for(let i = 0; i < 5; i++) {
     //     let btn = document.createElement('button');
