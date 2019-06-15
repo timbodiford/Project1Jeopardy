@@ -70,7 +70,7 @@ $(document).ready(function () {
         sci100 = {
             category: "science",
             value: "100",
-            question: "What is the answer?",
+            question: "What is the science answer?",
             attempted: false,
             answers: {
                 t: ['This is the correct answer!'],
@@ -83,7 +83,7 @@ $(document).ready(function () {
         math100 = {
             category: "science",
             value: "100",
-            question: "What is the answer?",
+            question: "What is the math answer?",
             attempted: false,
             answers: {
                 t: ['This is the correct answer!'],
@@ -96,7 +96,7 @@ $(document).ready(function () {
         gaStuff100 = {
             category: "science",
             value: "100",
-            question: "What is the answer?",
+            question: "What is the Stuff answer?",
             attempted: false,
             answers: {
                 t: ['This is the correct answer!'],
@@ -148,21 +148,13 @@ $(document).ready(function () {
     // for (let i = 0; i = manyQuestions[i].answers[i].length; i++) {
     // $(('.div.question-tile-100').eq(i)).con('click', function (evt) {
     //     for (let i = text(manyQuestions[1].answers.f[i] + "," + manyQuestions[1].answers.t[0]))
-  
-  
-  
 
-  
-  
-  
-  
-  
-    $('div').on('click', function (evt) {
-        evt.preventDefault()
-        // for (let i = 0; i < $('div.question').length; i++) {
-            console.log ("Hello")
-        }
-    )
+
+
+
+
+
+
 
 
     //working with dynamically adding boxes for the grid
@@ -178,17 +170,25 @@ $(document).ready(function () {
             $('.main-grid').after("<div class= 'show-question'></div>")
             //adding values tiles
         }
-        for (let i = 0; i < 4; i++) {
-            $('.main-grid').append("<div class = 'question tile-100'></div>")
+
+        for (i = 0; i < 4; i++) {
+            let tile100 = $("<div class = 'tile-100'></div>")
+
+            $('.main-grid').append(tile100)
+
+
         }
         for (let i = 0; i < 4; i++) {
-            $('.main-grid').append("<div class = 'question tile-200'></div>")
+            let tile200 = $("<div class = 'tile-200'></div>")
+            $('.main-grid').append(tile200)
         }
         for (let i = 0; i < 4; i++) {
-            $('.main-grid').append("<div class = 'question tile-300'></div>")
+            let tile300 = $("<div class = 'tile-300'></div>")
+            $('.main-grid').append(tile300)
         }
         for (let i = 0; i < 4; i++) {
-            $('.main-grid').append("<div class = 'question tile-400'></div>")
+            let tile400 = $("<div class = 'tile-400'></div>")
+            $('.main-grid').append(tile400)
         }
 
         //pushing data into category divs
@@ -197,7 +197,10 @@ $(document).ready(function () {
         }
         //pushing data into category divs
         for (let i = 0; i < questions.values.length; i++) {
-            ($('div.tile-100').eq(i).text(questions.values[0]))
+            ($('div.tile-100').eq(i).text(questions.values[0])).on('click', function () {
+                console.log("console log works");
+                $('div.tile-100').eq(i).html('test')
+            })
         }
 
         //pushing data into category divs
@@ -208,11 +211,35 @@ $(document).ready(function () {
         for (let i = 0; i < questions.values.length; i++) {
             ($('div.tile-300').eq(i).text(questions.values[2]))
         }
-        //pushing questions into show-question div
-        ($('div.show-question').append('<h2>' + sci100.question + '</h2>'))
+        for (let i = 0; i < questions.values.length; i++) {
+            ($('div.tile-400').eq(i).text(questions.values[3]))
+        }
+        // //pushing questions into show-question div
+        // ($('div.show-question').append('<h2>' + sci100.question + '</h2>'))
     }
     )
+    //this works to pull data from the object and display in the div by clicking on ANY div
+    //need to tie a specific div to a specific value in the object dynamically
 
+
+    //   $('div').on('click', function () {
+    //     for (let i = 0; i < 5; i++) {
+    //         ($('div.show-question').append('<h2>' + manyQuestions[i].question + '</h2>')
+    //         // ($('div.show-question').append('<h2>' + manyQuestions.eq[i].question + '</h2>')
+
+    //         )}
+    //     }
+    // )//this works but throws an error???
+
+    $('div.tile-200').on('click', function () {
+        for (let i = 0; i < 5; i++) {
+            ($('div.show-question').append('<h2>' + manyQuestions[i].question + '</h2>')
+                // ($('div.show-question').append('<h2>' + manyQuestions.eq[i].question + '</h2>')
+
+            )
+        }
+    }
+    )
 
 
 
@@ -235,7 +262,7 @@ $(document).ready(function () {
 
 
 
-    
+
 
 
 

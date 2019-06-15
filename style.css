@@ -6,6 +6,8 @@ body {
 button {
     font-size: 20px;
 }
+.scoreValue {
+}
 
 .main-grid {
     display: grid;
