@@ -199,7 +199,7 @@ $(document).ready(function () {
         for (let i = 0; i < questions.values.length; i++) {
             ($('div.tile-100').eq(i).text(questions.values[0])).on('click', function () {
                 console.log("console log works");
-                $('div.tile-100').eq(i).html('test')
+                alert(manyQuestions[i].question)
             })
         }
 
