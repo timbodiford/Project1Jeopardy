@@ -75,12 +75,13 @@ $(document).ready(function () {
             question: "What is the science answer?",
             attempted: false,
             answers: {
-                t: ['\nThis is the correct answer!'],
-                f: ["\nThis one is wrong.",
-                    "\n Also wrong!",
-                    "\nNope not this one either!"
+                t: ['\na: This is the correct answer!'],
+                f: ["\nb: This one is wrong.",
+                    "\nc: Also wrong!",
+                    "\nd: Nope not this one either!"
                 ]
-            }
+            },
+            correctAnswer: "a"
         },
         math100 = {
             category: "science",
@@ -217,20 +218,28 @@ $(document).ready(function () {
                 //found help with the above on how to add an embedded event listener to the dynamically created divs - example is not the same but felt i should give some credit https://www.youtube.com/watch?v=Wxnd21_f_pc
                 //trying below to make the value fade out when the alert displays
                 //below make the object question show up in the alert
-                
+
                 if (manyQuestions[i].attempted === false) {
+                    // let response = window.prompt(manyQuestions);
                     // console.log(($(manyQuestions[0].question)).eq(i))
-                    prompt(manyQuestions[i].question + manyQuestions[i].answers.t + manyQuestions[i].answers.f)
-                    
-                    
+                    let response = window.prompt(manyQuestions[i].question + manyQuestions[i].answers.t + manyQuestions[i].answers.f)
+                    let score = 0
+                    if (response == manyQuestions[i].correctAnswer) {
+                        score = score + manyQuestions[0].value
+
+                        alert("That's correct!!!")
+                    }
+
+
                 } ($('div.tile-100').eq(i).text(""))
+
             })
             /*^^^this works!!! makes the tile display the */
             // ($('div.tile-100').eq(i)).on('click', function () {
             // $(questions.values[0]).eq(i).fadeOut()
 
             // })
-            }
+        }
 
 
         //pushing data into category divs
