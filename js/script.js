@@ -66,12 +66,14 @@
 
 $(document).ready(function () {
 
-    let score = 0
+
+
+
 
     manyQuestions = [
         sci100 = {
-            category: "science",
-            value: "100",
+            category: "Science",
+            value: 100,
             question: "What is the science answer?",
             attempted: false,
             answers: {
@@ -84,21 +86,23 @@ $(document).ready(function () {
             correctAnswer: "a"
         },
         math100 = {
-            category: "science",
-            value: "100",
+            category: "Math",
+            value: 100,
             question: "What is the math answer?",
             attempted: false,
             answers: {
-                t: ['This is the correct answer!'],
-                f: ["This one is wrong.",
-                    "Also wrong!",
-                    "Nope not this one either!"
+                t: ['\nThis is the correct answer!'],
+                f: ["\nThis one is wrong.",
+                    "\nAlso wrong!",
+                    "\nNope not this one either!"
                 ]
-            }
+            },
+            correctAnswer: "b"
+
         },
         gaStuff100 = {
-            category: "science",
-            value: "100",
+            category: "GA Stuff",
+            value: 100,
             question: "What is the Stuff answer?",
             attempted: false,
             answers: {
@@ -107,11 +111,12 @@ $(document).ready(function () {
                     "Also wrong!",
                     "Nope not this one either!"
                 ]
-            }
+            },
+            correctAnswer: "a"
         },
         gaStuff100 = {
-            category: "science",
-            value: "100",
+            category: "Potpourri",
+            value: 100,
             question: "What is the Stuff answer?",
             attempted: false,
             answers: {
@@ -120,7 +125,8 @@ $(document).ready(function () {
                     "Also wrong!",
                     "Nope not this one either!"
                 ]
-            }
+            },
+            correctAnswer: "b"
         }]
 
     // let sc100Answers = sci100.answers
@@ -135,10 +141,10 @@ $(document).ready(function () {
             "Not sure yet"
         ],
         values: [
-            "100",
-            "200",
-            "300",
-            "400",
+            100,
+            200,
+            300,
+            400,
         ]
 
     }
@@ -210,6 +216,7 @@ $(document).ready(function () {
         //pushing data into category divs
         for (let i = 0; i < questions.categories.length; i++) {
             ($('div.cat-tile').eq(i).text(questions.categories[i]))
+            
         }
         //pushing data into $$amt divs
         for (let i = 0; i < questions.values.length; i++) {
@@ -218,20 +225,32 @@ $(document).ready(function () {
                 //found help with the above on how to add an embedded event listener to the dynamically created divs - example is not the same but felt i should give some credit https://www.youtube.com/watch?v=Wxnd21_f_pc
                 //trying below to make the value fade out when the alert displays
                 //below make the object question show up in the alert
-
+var score = 0 
                 if (manyQuestions[i].attempted === false) {
                     // let response = window.prompt(manyQuestions);
                     // console.log(($(manyQuestions[0].question)).eq(i))
-                    let response = window.prompt(manyQuestions[i].question + manyQuestions[i].answers.t + manyQuestions[i].answers.f)
-                    let score = 0
+                    let response = prompt(manyQuestions[i].question + manyQuestions[i].answers.t + manyQuestions[i].answers.f)
+                    // let questValue = manyQuestions[i].value
                     if (response == manyQuestions[i].correctAnswer) {
-                        score = score + manyQuestions[0].value
-
                         alert("That's correct!!!")
-                    }
+                        console.log("Testing!!!!!!!!!!!!!!")
+
+                        score = score + manyQuestions[i].value
+                    
+                        ($('div.score').text(score));
+
+
+                    } else { alert("Ohhh... sorry!  That is not correct.")
+                    score = score - questions.values[i]
+                    ($('div.score').text(score));
+
+                }
+
 
 
                 } ($('div.tile-100').eq(i).text(""))
+                // ($('div.score').text(score))
+
 
             })
             /*^^^this works!!! makes the tile display the */
