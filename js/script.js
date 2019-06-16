@@ -105,6 +105,19 @@ $(document).ready(function () {
                     "Nope not this one either!"
                 ]
             }
+        },
+        gaStuff100 = {
+            category: "science",
+            value: "100",
+            question: "What is the Stuff answer?",
+            attempted: false,
+            answers: {
+                t: ['This is the correct answer!'],
+                f: ["This one is wrong.",
+                    "Also wrong!",
+                    "Nope not this one either!"
+                ]
+            }
         }]
 
     // let sc100Answers = sci100.answers
@@ -113,10 +126,10 @@ $(document).ready(function () {
 
     questions = {
         categories: [
-            "firstCat",
-            "secondCat",
-            "thirdCat",
-            "fourthCat"
+            "Science",
+            "Math",
+            "GA Stuff",
+            "Not sure yet"
         ],
         values: [
             "100",
@@ -159,7 +172,7 @@ $(document).ready(function () {
 
     //working with dynamically adding boxes for the grid
     //click event
-    $('button').on('click', function (evt) {
+    $('button.new-game').on('click', function (evt) {
         evt.preventDefault()
         console.log('clicked')
         //adding category tiles
@@ -195,13 +208,27 @@ $(document).ready(function () {
         for (let i = 0; i < questions.categories.length; i++) {
             ($('div.cat-tile').eq(i).text(questions.categories[i]))
         }
-        //pushing data into category divs
+        //pushing data into $$amt divs
         for (let i = 0; i < questions.values.length; i++) {
             ($('div.tile-100').eq(i).text(questions.values[0])).on('click', function () {
                 console.log("console log works");
-                alert(manyQuestions[i].question)
+                //found help with the above on how to add an embedded event listener to the dynamically created divs - example is not the same but felt i should give some credit https://www.youtube.com/watch?v=Wxnd21_f_pc
+                //trying below to make the value fade out when the alert displays
+                //below make the object question show up in the alert
+                
+                if (manyQuestions[i].attempted === false) {
+                    // console.log(($(manyQuestions[0].question)).eq(i))
+                    alert(manyQuestions[i].question)
+                    
+                } ($('div.tile-100').eq(i).text(""))
             })
-        }
+            /*^^^this works!!! makes the tile display the */
+            // ($('div.tile-100').eq(i)).on('click', function () {
+            // $(questions.values[0]).eq(i).fadeOut()
+
+            // })
+            }
+
 
         //pushing data into category divs
         for (let i = 0; i < questions.values.length; i++) {
