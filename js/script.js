@@ -66,6 +66,8 @@
 
 $(document).ready(function () {
 
+    let score = 0
+
     manyQuestions = [
         sci100 = {
             category: "science",
@@ -73,10 +75,10 @@ $(document).ready(function () {
             question: "What is the science answer?",
             attempted: false,
             answers: {
-                t: ['This is the correct answer!'],
-                f: ["This one is wrong.",
-                    "Also wrong!",
-                    "Nope not this one either!"
+                t: ['\nThis is the correct answer!'],
+                f: ["\nThis one is wrong.",
+                    "\n Also wrong!",
+                    "\nNope not this one either!"
                 ]
             }
         },
@@ -218,7 +220,8 @@ $(document).ready(function () {
                 
                 if (manyQuestions[i].attempted === false) {
                     // console.log(($(manyQuestions[0].question)).eq(i))
-                    alert(manyQuestions[i].question)
+                    prompt(manyQuestions[i].question + manyQuestions[i].answers.t + manyQuestions[i].answers.f)
+                    
                     
                 } ($('div.tile-100').eq(i).text(""))
             })
