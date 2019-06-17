@@ -279,6 +279,7 @@ var score = parseInt(0)
         console.log('clicked')
         //adding category tiles and values
         for (let i = 0; i < questions.categories.length; i++) {
+            $('.instructSection').remove();
             $('.main-grid').append("<div class = 'cat-tile'></div>");
             $('div.cat-tile').eq(i).text(questions.categories[i]);
         }
@@ -309,25 +310,23 @@ var score = parseInt(0)
                     //win condition
                     if (score >= 1000) {
                         alert("You've won!");
+                        location.reload()
                     }
-                    //lose condition
-                    for (i =0; i < manyQuestions.length; i++) {}
-                    if ($('div.divId').eq(i).text() = "");
-                    alert("You lose!")
+                    // //lose condition
+                    // for (i =0; i < manyQuestions.length; i++) {}
+                    // if ($('div.divId').eq(i).is(':empty')){;
+                    // alert("You lose!")
+                    // }
+
+                    // if( $('#leftmenu').is(':empty') ) {
 
                     
 
                 } 
                 ($('div.divId').eq(i).text(""))
 
-
-
-
-
-
-
-
             }
+
             )
         }
     }
