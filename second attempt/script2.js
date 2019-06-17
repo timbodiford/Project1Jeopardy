@@ -272,7 +272,7 @@ $(document).ready(function () {
         ]
 
     }
-
+var score = 0
 
     $('button.new-game').on('click', function (evt) {
         evt.preventDefault()
@@ -290,8 +290,8 @@ $(document).ready(function () {
                 console.log("console log works");
 
                 if (manyQuestions[i].attempted === false) {
-                    score = parseInt(0);
-                    let response = prompt(manyQuestions[i].question + manyQuestions[i].answers.t + manyQuestions[i].answers.f)
+                    // score = parseInt(0);
+                    let response = prompt(manyQuestions[i].question + manyQuestions[i].answers.t + manyQuestions[i].answers.f);
                     if (response == manyQuestions[i].correctAnswer) {
                         alert("That's correct!!!");
                         console.log("Testing!!!!!!!!!!!!!!");
@@ -302,7 +302,7 @@ $(document).ready(function () {
 
                     } else {
                         alert("Ohhh... sorry!  That is not correct.");
-                        score = score - manyQuestions[i].value;
+                        score -= parseInt(manyQuestions[i].value);
                         $('.scoreValue').text(score);
 
                     }
