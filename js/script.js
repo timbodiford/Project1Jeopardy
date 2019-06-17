@@ -1,77 +1,7 @@
-//Psuedocode
-//Figure out how to structure data in objects / arrays
-//Create HTML elements
-//Add in CSS
-//create variables like score
-//build functions to keepo track of score
-
-
-
-// var categories = [
-//     "HTML",
-//     "JS"
-// ]
-// var tilevalueS = [
-//     "100",
-//     "300",
-//     "500"
-// ]
-
-// var questions = {
-//     true: "Correct",
-//     false: "Not correct",
-//     false: "Not correct",
-// }
-
-
-// //this doesn't tie questions to a specific category or value..  i think i need to nest.. refer to the planets object...
-
-
-
-
-// var science = {
-//     values: {
-//         onHundred: {
-//             question: "Which is correct?",
-//             trueAnswer: "correct Question",
-//             falseAnswers: [
-//                 "This question is false",
-//                 "Here's another false question",
-//                 "Yep, also false"
-//             ],
-//             attempted: false
-//         },
-//         twoHundred: {
-//             question: "Which is correct?",
-//             trueAnswer: "correct Question",
-//             falseAnswers: [
-//                 "This question is false",
-//                 "Here's another false question",
-//                 "Yep, also false"
-//             ],
-//             attempted: false
-//         },
-//         threeHundred: {
-//             question: "Which is correct?",
-//             trueAnswer: 'correct Question',
-//             falseAnswers: [
-//                 "This question is false",
-//                 "Here's another false question",
-//                 "Yep, also false"
-//             ],
-//             attempted: false
-//         }
-//     }
-// }
-
 $(document).ready(function () {
-
-
-
-
-
     manyQuestions = [
         sci100 = {
+            divId: 1,
             category: "Science",
             value: 100,
             question: "What is the science answer?",
@@ -86,8 +16,131 @@ $(document).ready(function () {
             correctAnswer: "a"
         },
         math100 = {
+            divId: 2,
             category: "Math",
             value: 100,
+            question: "What is the math answer?",
+            attempted: false,
+            answers: {
+                t: ['\na: This is the correct answer!'],
+                f: ["\nb: This one is wrong.",
+                    "\nc: Also wrong!",
+                    "\nd: Nope not this one either!"
+                ]
+            },
+            correctAnswer: "b"
+
+        },
+        gaStuff100 = {
+            divId: 3,
+            category: "GA Stuff",
+            value: 100,
+            question: "What is the Stuff answer?",
+            attempted: false,
+            answers: {
+                t: ['\na: This is the correct answer!'],
+                f: ["\nb: This one is wrong.",
+                    "\nc: Also wrong!",
+                    "\nd: Nope not this one either!"
+                ]
+            },
+            correctAnswer: "a"
+        },
+        gaStuff100 = {
+            divId: 4,
+            category: "Potpourri",
+            value: 100,
+            question: "What is the Stuff answer?",
+            attempted: false,
+            answers: {
+                t: ['\na: This is the correct answer!'],
+                f: ["\nb: This one is wrong.",
+                    "\nc: Also wrong!",
+                    "\nd: Nope not this one either!"
+                ]
+            },
+            correctAnswer: "b"
+        },
+        sci200 = {
+            divId: 5,
+            category: "Science",
+            value: 200,
+            question: "What is the science answer?",
+            attempted: false,
+            answers: {
+                t: ['\na: This is the correct answer!'],
+                f: ["\nb: This one is wrong.",
+                    "\nc: Also wrong!",
+                    "\nd: Nope not this one either!"
+                ]
+            },
+            correctAnswer: "a"
+        },
+        math200 = {
+            divId: 6,
+            category: "Math",
+            value: 200,
+            question: "What is the math answer?",
+            attempted: false,
+            answers: {
+                t: ['\na: This is the correct answer!'],
+                f: ["\nb: This one is wrong.",
+                    "\nc: Also wrong!",
+                    "\nd: Nope not this one either!"
+                ]
+            },
+            correctAnswer: "b"
+
+        },
+        gaStuff200 = {
+            divId: 7,
+            category: "GA Stuff",
+            value: 200,
+            question: "What is the Stuff answer?",
+            attempted: false,
+            answers: {
+                t: ['\na: This is the correct answer!'],
+                f: ["\nb: This one is wrong.",
+                    "\nc: Also wrong!",
+                    "\nd: Nope not this one either!"
+                ]
+            },
+            correctAnswer: "a"
+        },
+        gaStuff200 = {
+            divId: 8,
+            category: "Potpourri",
+            value: 200,
+            question: "What is the Stuff answer?",
+            attempted: false,
+            answers: {
+                t: ['\na: This is the correct answer!'],
+                f: ["\nb: This one is wrong.",
+                    "\nc: Also wrong!",
+                    "\nd: Nope not this one either!"
+                ]
+            },
+            correctAnswer: "b"
+        },
+        sci300 = {
+            divId: 9,
+            category: "Science",
+            value: 300,
+            question: "What is the science answer?",
+            attempted: false,
+            answers: {
+                t: ['\na: This is the correct answer!'],
+                f: ["\nb: This one is wrong.",
+                    "\nc: Also wrong!",
+                    "\nd: Nope not this one either!"
+                ]
+            },
+            correctAnswer: "a"
+        },
+        math300 = {
+            divId: 10,
+            category: "Math",
+            value: 300,
             question: "What is the math answer?",
             attempted: false,
             answers: {
@@ -100,40 +153,98 @@ $(document).ready(function () {
             correctAnswer: "b"
 
         },
-        gaStuff100 = {
+        gaStuff300 = {
+            divId: 11,
             category: "GA Stuff",
-            value: 100,
+            value: 300,
             question: "What is the Stuff answer?",
             attempted: false,
             answers: {
-                t: ['This is the correct answer!'],
-                f: ["This one is wrong.",
-                    "Also wrong!",
-                    "Nope not this one either!"
+                t: ['\na: This is the correct answer!'],
+                f: ["\nb: This one is wrong.",
+                    "\nc: Also wrong!",
+                    "\nd: Nope not this one either!"
                 ]
             },
             correctAnswer: "a"
         },
-        gaStuff100 = {
+        gaStuff300 = {
+            divId: 12,
             category: "Potpourri",
-            value: 100,
+            value: 300,
             question: "What is the Stuff answer?",
             attempted: false,
             answers: {
-                t: ['This is the correct answer!'],
-                f: ["This one is wrong.",
-                    "Also wrong!",
-                    "Nope not this one either!"
+                t: ['\na: This is the correct answer!'],
+                f: ["\nb: This one is wrong.",
+                    "\nc: Also wrong!",
+                    "\nd: Nope not this one either!"
                 ]
             },
             correctAnswer: "b"
+        },
+        sci400 = {
+            divId: 13,
+            category: "Science",
+            value: 400,
+            question: "What is the science answer?",
+            attempted: false,
+            answers: {
+                t: ['\na: This is the correct answer!'],
+                f: ["\nb: This one is wrong.",
+                    "\nc: Also wrong!",
+                    "\nd: Nope not this one either!"
+                ]
+            },
+            correctAnswer: "a"
+        },
+        math400 = {
+            divId: 14,
+            category: "Math",
+            value: 400,
+            question: "What is the math answer?",
+            attempted: false,
+            answers: {
+                t: ['\na: This is the correct answer!'],
+                f: ["\nb: This one is wrong.",
+                    "\nc: Also wrong!",
+                    "\nd: Nope not this one either!"
+                ]
+            },
+            correctAnswer: "b"
+
+        },
+        gaStuff400 = {
+            divId: 15,
+            category: "GA Stuff",
+            value: 400,
+            question: "What is the Stuff answer?",
+            attempted: false,
+            answers: {
+                t: ['\na: This is the correct answer!'],
+                f: ["\nb: This one is wrong.",
+                    "\nc: Also wrong!",
+                    "\nd: Nope not this one either!"
+                ]
+            },
+            correctAnswer: "a"
+        },
+        gaStuff400 = {
+            divId: 16,
+            category: "Potpourri",
+            value: 400,
+            question: "What is the Stuff answer?",
+            attempted: false,
+            answers: {
+                t: ['\na: This is the correct answer!'],
+                f: ["\nb: This one is wrong.",
+                    "\nc: Also wrong!",
+                    "\nd: Nope not this one either!"
+                ]
+            },
+            correctAnswer: "b"
+
         }]
-        
-
-    // let sc100Answers = sci100.answers
-    // ($('div.question-tile-100').eq(i).text(questions.values[0]))
-
-
     questions = {
         categories: [
             "Science",
@@ -143,206 +254,101 @@ $(document).ready(function () {
         ],
         values: [
             100,
+            100,
+            100,
+            100,
+            200,
+            200,
+            200,
             200,
             300,
+            300,
+            300,
+            300,
             400,
+            400,
+            400,
+            400
         ]
 
     }
+    var score = parseInt(0)
 
-    // sci200 = {
-    //     category: "science",
-    //     value: "200",
-    //     question: "What is the answer here?",
-    //     attempted: false,
-    //     correctAnswer: "This is the correct answer!",
-    //     incorrectAnswers: [
-    //         "This one is wrong.",
-    //         "Also wrong!",
-    //         "Nope not this one either!"
-    //     ]
-    // }
-    //Use this to display answers??:
-
-    // console.log(sci100.answers.t)
-    // for (i = 0; i < sci100.answers.f.length; i++) {
-    //     console.log(sci100.answers.f[i])
-    // }
-    // for (let i = 0; i = manyQuestions[i].answers[i].length; i++) {
-    // $(('.div.question-tile-100').eq(i)).con('click', function (evt) {
-    //     for (let i = text(manyQuestions[1].answers.f[i] + "," + manyQuestions[1].answers.t[0]))
-
-
-
-
-
-
-
-
-
-    //working with dynamically adding boxes for the grid
-    //click event
     $('button.new-game').on('click', function (evt) {
         evt.preventDefault()
         console.log('clicked')
-        //adding category tiles
-        for (let i = 0; i < 4; i++) {
-            $('.main-grid').append("<div class = 'cat-tile'></div>")
-        }
-        for (let i = 0; i < 1; i++) {
-            $('.main-grid').after("<div class= 'show-question'></div>")
-            //adding values tiles
-        }
-
-        for (i = 0; i < 4; i++) {
-            let tile100 = $("<div class = 'tile-100'></div>")
-
-            $('.main-grid').append(tile100)
-
-
-        }
-        for (let i = 0; i < 4; i++) {
-            let tile200 = $("<div class = 'tile-200'></div>")
-            $('.main-grid').append(tile200)
-        }
-        for (let i = 0; i < 4; i++) {
-            let tile300 = $("<div class = 'tile-300'></div>")
-            $('.main-grid').append(tile300)
-        }
-        for (let i = 0; i < 4; i++) {
-            let tile400 = $("<div class = 'tile-400'></div>")
-            $('.main-grid').append(tile400)
-        }
-
-        //pushing data into category divs
+        //adding category tiles and values
         for (let i = 0; i < questions.categories.length; i++) {
-            ($('div.cat-tile').eq(i).text(questions.categories[i]))
-            
+            $('.instructSection').remove();
+            $('.main-grid').append("<div class = 'cat-tile'></div>");
+            $('div.cat-tile').eq(i).text(questions.categories[i]);
         }
-        //pushing data into $$amt divs
-        for (let i = 0; i < questions.values.length; i++) {
-            ($('div.tile-100').eq(i).text(questions.values[0])).on('click', function () {
+        //adding board tiles and values
+        for (let i = 0; i < manyQuestions.length; i++) {
+            $('.main-grid').append("<div class = divId " + i + "></div>");
+            $('div.divId').eq(i).text(manyQuestions[i].value).on('click', function () {
+
                 console.log("console log works");
-                //found help with the above on how to add an embedded event listener to the dynamically created divs - example is not the same but felt i should give some credit https://www.youtube.com/watch?v=Wxnd21_f_pc
-                //trying below to make the value fade out when the alert displays
-                //below make the object question show up in the alert
-var score = 0 
+
                 if (manyQuestions[i].attempted === false) {
-                    // let response = window.prompt(manyQuestions);
-                    // console.log(($(manyQuestions[0].question)).eq(i))
-                    let response = prompt(manyQuestions[i].question + manyQuestions[i].answers.t + manyQuestions[i].answers.f)
-                    // let questValue = manyQuestions[i].value
+                    // score = parseInt(0);
+                    manyQuestions[i].attempted = true;
+                    let response = prompt(manyQuestions[i].question + manyQuestions[i].answers.t + manyQuestions[i].answers.f);
                     if (response == manyQuestions[i].correctAnswer) {
-                        alert("That's correct!!!")
-                        console.log("Testing!!!!!!!!!!!!!!")
+                        alert("That's correct!!!");
+                        console.log("Testing!!!!!!!!!!!!!!");
+                        score += parseInt(manyQuestions[i].value);
+                        ($('.scoreValue').text(score));
+                        console.log(score);
 
-                        score = score + parseInt(100)
-                    
-                        ($('div.score').text(score));
+                    } else {
+                        alert("Ohhh... sorry!  That is not correct.");
+                        score -= parseInt(manyQuestions[i].value);
+                        $('.scoreValue').text(score);
+                        console.log(score);
+
+                    }
+                    //win condition
+                    if (score >= 1000) {
+                        alert("You've won!");
+                        location.reload();
+                    }
+                    // if ($('div.divId').eq(i).text() == ''){
+                    //     alert("You lose!");
+                    //     }
+                    // var allTiles = $('div.divId').eq(0).html();
+                    // console.log(allTiles);
+                    // if ($('div.divId').eq(0).html() = "") {
+                    //     console.log("you lose");
+                    // }
+                    //lose condition
+                    if (score < -2000) {
+                        alert("Sorry - you should try playing again.");
+                        location.reload();
+
+                    }
+
+                    // //lose condition
+                    // for (i =0; i < manyQuestions.length; i++) {}
+                    // if ($('div.divId').eq(i).text().is(':empty')){;
+                    // alert("You lose!")
+                    // }
+
+                    // if( $('#leftmenu').is(':empty') ) {
 
 
-                    } else { alert("Ohhh... sorry!  That is not correct.")
-                    score = score - questions.values[i]
-                    $('div.score').text(score);
 
                 }
+                ($('div.divId').eq(i).text(""))
+                if (manyQuestions[i].attempted === true) {
+                    return;
+                }
 
-
-
-                } ($('div.tile-100').eq(i).text(""))
-                // ($('div.score').text(score))
-
-
-            })
-            /*^^^this works!!! makes the tile display the */
-            // ($('div.tile-100').eq(i)).on('click', function () {
-            // $(questions.values[0]).eq(i).fadeOut()
-
-            // })
-        }
-
-
-        //pushing data into category divs
-        for (let i = 0; i < questions.values.length; i++) {
-            ($('div.tile-200').eq(i).text(questions.values[1]))
-        }
-        //pushing data into category divs
-        for (let i = 0; i < questions.values.length; i++) {
-            ($('div.tile-300').eq(i).text(questions.values[2]))
-        }
-        for (let i = 0; i < questions.values.length; i++) {
-            ($('div.tile-400').eq(i).text(questions.values[3]))
-        }
-        // //pushing questions into show-question div
-        // ($('div.show-question').append('<h2>' + sci100.question + '</h2>'))
-    }
-    )
-    //this works to pull data from the object and display in the div by clicking on ANY div
-    //need to tie a specific div to a specific value in the object dynamically
-
-
-    //   $('div').on('click', function () {
-    //     for (let i = 0; i < 5; i++) {
-    //         ($('div.show-question').append('<h2>' + manyQuestions[i].question + '</h2>')
-    //         // ($('div.show-question').append('<h2>' + manyQuestions.eq[i].question + '</h2>')
-
-    //         )}
-    //     }
-    // )//this works but throws an error???
-
-    $('div.tile-200').on('click', function () {
-        for (let i = 0; i < 5; i++) {
-            ($('div.show-question').append('<h2>' + manyQuestions[i].question + '</h2>')
-                // ($('div.show-question').append('<h2>' + manyQuestions.eq[i].question + '</h2>')
+            }
 
             )
         }
     }
     )
-
-
-
-    // var divs = document.querySelectorAll('div.question')
-    // for (let i = 0; i < divs.length; i++) {
-    //     divs[i].addEventListener('click', function(){
-    //         console.log(1)
-    //     })
-    // }
-
-
-
-})
-
-//This isn't going to work because it's trying to start from position one ands overwriting the 100 values
-//How do I loop the loop? 100 100 100 100 / 200 200 200 200 / 300 300 300 300, etc?
-
-//Or do I create separate rows with a separate class for each $$$ amt?
-
-
-
-
-
-
-
-
-
-    // for(let i = 0; i < 5; i++) {
-    //     let btn = document.createElement('button');
-    //     btn.classList.add('square');
-    //     main-Container.appendChild(btn);
-    //     btn.appendChild(document.createTextNode('$100'))
-    // }
-
-
-    // function createDiv () {
-    //     $('main-Container').append('<div class="category-tiles"')
-    // }
-
-
-
-
-    // for(let i = 0; i < 25; i++) {
-    //    let btn = document.createElement('div');
-    //    btn.classList.add('tile');
-    //    gameBoard.appendChild(btn);
-    // }
+}
+)

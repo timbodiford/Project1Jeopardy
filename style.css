@@ -2,11 +2,42 @@
 font-family: 'Boogaloo', cursive; */
 
 body {
-    font-family: 'Boogaloo', cursive;}
-button {
-    font-size: 20px;
+    font-family: 'Boogaloo', cursive;
+}
+header {
+
+}
+.score {
+    display: flex;
+    flex-direction: row;
+    /* flex-direction: row; */
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 35px;
+    background-color: blue;
+    color: white;
+    padding: 25px 0;
+}
+.title {
 }
 .scoreValue {
+}
+.instructionSection {
+display: flex;
+}
+.insTitle {
+font-size: 44px;
+
+}
+.instructions {
+font-size: 35px ;
+padding: 50px 20px;
+text-align: center;
+}
+.new-game {
+    font-size: 20px;
+    margin:0 auto;
+    display:block;
 }
 
 .main-grid {
@@ -18,27 +49,23 @@ button {
     /* /* justify-content: space-evenly; */
     text-align: center;
     font-size: 35px;
-    color: white;
+    padding: 50px 0 0 0;
 
 
 }
 .cat-tile{
     background-color: blue;
-    padding: 10px;
+    padding: 10px;    color: white;
+
 }
-div.tile-100{
+div.divId{
+    display: flex;  
     background-color: blue;
-    padding: 10px;
-}
-div.tile-200{
-    background-color: blue;
-    padding: 10px;
-}
-div.tile-300{
-    background-color: blue;
-    padding: 10px;
-}
-div.tile-400{
-    background-color: blue;
-    padding: 10px;
+    /* padding: 10px; */
+    color: gold;
+    font-size: 40px;
+    align-items: center;
+    justify-content: center;
+   
+
 }

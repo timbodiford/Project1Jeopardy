@@ -1,0 +1,44 @@
+/* font-family: 'Anton', sans-serif;
+font-family: 'Boogaloo', cursive; */
+
+body {
+    font-family: 'Boogaloo', cursive;}
+button {
+    font-size: 20px;
+}
+.scoreValue {
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 60px 100px 100px 100px 100px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    /* /* justify-content: space-evenly; */
+    text-align: center;
+    font-size: 35px;
+    color: white;
+
+
+}
+.cat-tile{
+    background-color: blue;
+    padding: 10px;
+}
+div.tile-100{
+    background-color: blue;
+    padding: 10px;
+}
+div.tile-200{
+    background-color: blue;
+    padding: 10px;
+}
+div.tile-300{
+    background-color: blue;
+    padding: 10px;
+}
+div.tile-400{
+    background-color: blue;
+    padding: 10px;
+}
