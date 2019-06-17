@@ -128,6 +128,7 @@ $(document).ready(function () {
             },
             correctAnswer: "b"
         }]
+        
 
     // let sc100Answers = sci100.answers
     // ($('div.question-tile-100').eq(i).text(questions.values[0]))
@@ -235,14 +236,14 @@ var score = 0
                         alert("That's correct!!!")
                         console.log("Testing!!!!!!!!!!!!!!")
 
-                        score = score + manyQuestions[i].value
+                        score = score + parseInt(100)
                     
                         ($('div.score').text(score));
 
 
                     } else { alert("Ohhh... sorry!  That is not correct.")
                     score = score - questions.values[i]
-                    ($('div.score').text(score));
+                    $('div.score').text(score);
 
                 }
 
