@@ -272,7 +272,7 @@ $(document).ready(function () {
         ]
 
     }
-var score = parseInt(0)
+    var score = parseInt(0)
 
     $('button.new-game').on('click', function (evt) {
         evt.preventDefault()
@@ -312,7 +312,7 @@ var score = parseInt(0)
                     if (score >= 1000) {
                         alert("You've won!");
                         location.reload();
-                    } 
+                    }
                     // if ($('div.divId').eq(i).text() == ''){
                     //     alert("You lose!");
                     //     }
@@ -327,7 +327,7 @@ var score = parseInt(0)
                         location.reload();
 
                     }
-                
+
                     // //lose condition
                     // for (i =0; i < manyQuestions.length; i++) {}
                     // if ($('div.divId').eq(i).text().is(':empty')){;
@@ -336,9 +336,9 @@ var score = parseInt(0)
 
                     // if( $('#leftmenu').is(':empty') ) {
 
-                    
 
-                } 
+
+                }
                 ($('div.divId').eq(i).text(""))
                 if (manyQuestions[i].attempted === true) {
                     return;
