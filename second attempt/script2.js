@@ -310,11 +310,26 @@ var score = parseInt(0)
                     //win condition
                     if (score >= 1000) {
                         alert("You've won!");
-                        location.reload()
+                        location.reload();
+                    } 
+                    // if ($('div.divId').eq(i).text() == ''){
+                    //     alert("You lose!");
+                    //     }
+                    var allTiles = $('div.divId').eq(0).html();
+                    console.log(allTiles);
+                    // if ($('div.divId').eq(0).html() = "") {
+                    //     console.log("you lose");
+                    // }
+                    //lose condition
+                    if (score < -2000) {
+                        alert("Sorry - you should try playing again.");
+                        location.reload();
+
                     }
+                
                     // //lose condition
                     // for (i =0; i < manyQuestions.length; i++) {}
-                    // if ($('div.divId').eq(i).is(':empty')){;
+                    // if ($('div.divId').eq(i).text().is(':empty')){;
                     // alert("You lose!")
                     // }
 
