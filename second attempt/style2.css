@@ -2,7 +2,16 @@
 font-family: 'Boogaloo', cursive; */
 
 body {
-    font-family: 'Boogaloo', cursive;}
+    font-family: 'Boogaloo', cursive;
+}
+header {
+    display: flex;
+}
+.score {
+    display: flex;
+    align-content: right;
+}
+
 button {
     font-size: 20px;
 }

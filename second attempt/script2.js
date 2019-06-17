@@ -299,17 +299,26 @@ var score = parseInt(0)
                         ($('.scoreValue').text(score));
                         console.log(score);
 
-
                     } else {
                         alert("Ohhh... sorry!  That is not correct.");
                         score -= parseInt(manyQuestions[i].value);
                         $('.scoreValue').text(score);
+                        console.log(score);
 
                     }
+                    //win condition
+                    if (score >= 1000) {
+                        alert("You've won!");
+                    }
+                    //lose condition
+                    for (i =0; i < manyQuestions.length; i++) {}
+                    if ($('div.divId').eq(i).text() = "");
+                    alert("You lose!")
 
+                    
 
-
-                } ($('div.divId').eq(i).text(""))
+                } 
+                ($('div.divId').eq(i).text(""))
 
 
 
