@@ -272,7 +272,7 @@ $(document).ready(function () {
         ]
 
     }
-var score = 0
+var score = parseInt(0)
 
     $('button.new-game').on('click', function (evt) {
         evt.preventDefault()
