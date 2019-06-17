@@ -292,6 +292,7 @@ var score = parseInt(0)
 
                 if (manyQuestions[i].attempted === false) {
                     // score = parseInt(0);
+                    manyQuestions[i].attempted = true;
                     let response = prompt(manyQuestions[i].question + manyQuestions[i].answers.t + manyQuestions[i].answers.f);
                     if (response == manyQuestions[i].correctAnswer) {
                         alert("That's correct!!!");
@@ -315,8 +316,8 @@ var score = parseInt(0)
                     // if ($('div.divId').eq(i).text() == ''){
                     //     alert("You lose!");
                     //     }
-                    var allTiles = $('div.divId').eq(0).html();
-                    console.log(allTiles);
+                    // var allTiles = $('div.divId').eq(0).html();
+                    // console.log(allTiles);
                     // if ($('div.divId').eq(0).html() = "") {
                     //     console.log("you lose");
                     // }
@@ -339,6 +340,9 @@ var score = parseInt(0)
 
                 } 
                 ($('div.divId').eq(i).text(""))
+                if (manyQuestions[i].attempted === true) {
+                    return;
+                }
 
             }
 
