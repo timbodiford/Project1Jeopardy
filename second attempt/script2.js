@@ -285,7 +285,7 @@ $(document).ready(function () {
         //adding board tiles and values
         for (let i = 0; i < manyQuestions.length; i++) {
             $('.main-grid').append("<div class = divId " + i + "></div>");
-                $('div.divId').eq(i).text(manyQuestions[i].value).on('click', function () {
+            $('div.divId').eq(i).text(manyQuestions[i].value).on('click', function () {
 
                 console.log("console log works");
 
@@ -295,15 +295,15 @@ $(document).ready(function () {
                     if (response == manyQuestions[i].correctAnswer) {
                         alert("That's correct!!!");
                         console.log("Testing!!!!!!!!!!!!!!");
-                        score = score + parseInt(manyQuestions[i].value);
-                        ($('div.score').text(score));
+                        score += parseInt(manyQuestions[i].value);
+                        ($('.scoreValue').text(score));
                         console.log(score);
 
 
                     } else {
                         alert("Ohhh... sorry!  That is not correct.");
                         score = score - manyQuestions[i].value;
-                        $('div.score').text(score);
+                        $('.scoreValue').text(score);
 
                     }
 
