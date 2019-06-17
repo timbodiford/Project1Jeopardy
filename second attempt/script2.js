@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    var score;
     manyQuestions = [
         sci100 = {
             divId: 1,
@@ -63,9 +62,9 @@ $(document).ready(function () {
             correctAnswer: "b"
         },
         sci200 = {
-            divId: 1,
+            divId: 5,
             category: "Science",
-            value: 100,
+            value: 200,
             question: "What is the science answer?",
             attempted: false,
             answers: {
@@ -78,9 +77,9 @@ $(document).ready(function () {
             correctAnswer: "a"
         },
         math200 = {
-            divId: 2,
+            divId: 6,
             category: "Math",
-            value: 100,
+            value: 200,
             question: "What is the math answer?",
             attempted: false,
             answers: {
@@ -94,9 +93,9 @@ $(document).ready(function () {
 
         },
         gaStuff200 = {
-            divId: 3,
+            divId: 7,
             category: "GA Stuff",
-            value: 100,
+            value: 200,
             question: "What is the Stuff answer?",
             attempted: false,
             answers: {
@@ -109,9 +108,9 @@ $(document).ready(function () {
             correctAnswer: "a"
         },
         gaStuff200 = {
-            divId: 4,
+            divId: 8,
             category: "Potpourri",
-            value: 100,
+            value: 200,
             question: "What is the Stuff answer?",
             attempted: false,
             answers: {
@@ -123,10 +122,10 @@ $(document).ready(function () {
             },
             correctAnswer: "b"
         },
-        sci200 = {
-            divId: 1,
+        sci300 = {
+            divId: 9,
             category: "Science",
-            value: 100,
+            value: 300,
             question: "What is the science answer?",
             attempted: false,
             answers: {
@@ -138,10 +137,10 @@ $(document).ready(function () {
             },
             correctAnswer: "a"
         },
-        math200 = {
-            divId: 2,
+        math300 = {
+            divId: 10,
             category: "Math",
-            value: 100,
+            value: 300,
             question: "What is the math answer?",
             attempted: false,
             answers: {
@@ -154,10 +153,10 @@ $(document).ready(function () {
             correctAnswer: "b"
 
         },
-        gaStuff200 = {
-            divId: 3,
+        gaStuff300 = {
+            divId: 11,
             category: "GA Stuff",
-            value: 100,
+            value: 300,
             question: "What is the Stuff answer?",
             attempted: false,
             answers: {
@@ -169,10 +168,10 @@ $(document).ready(function () {
             },
             correctAnswer: "a"
         },
-        gaStuff200 = {
-            divId: 4,
+        gaStuff300 = {
+            divId: 12,
             category: "Potpourri",
-            value: 100,
+            value: 300,
             question: "What is the Stuff answer?",
             attempted: false,
             answers: {
@@ -184,10 +183,10 @@ $(document).ready(function () {
             },
             correctAnswer: "b"
         },
-        sci200 = {
-            divId: 1,
+        sci400 = {
+            divId: 13,
             category: "Science",
-            value: 100,
+            value: 400,
             question: "What is the science answer?",
             attempted: false,
             answers: {
@@ -199,10 +198,10 @@ $(document).ready(function () {
             },
             correctAnswer: "a"
         },
-        math200 = {
-            divId: 2,
+        math400 = {
+            divId: 14,
             category: "Math",
-            value: 100,
+            value: 400,
             question: "What is the math answer?",
             attempted: false,
             answers: {
@@ -215,10 +214,10 @@ $(document).ready(function () {
             correctAnswer: "b"
 
         },
-        gaStuff200 = {
-            divId: 3,
+        gaStuff400 = {
+            divId: 15,
             category: "GA Stuff",
-            value: 100,
+            value: 400,
             question: "What is the Stuff answer?",
             attempted: false,
             answers: {
@@ -230,10 +229,10 @@ $(document).ready(function () {
             },
             correctAnswer: "a"
         },
-        gaStuff200 = {
-            divId: 4,
+        gaStuff400 = {
+            divId: 16,
             category: "Potpourri",
-            value: 100,
+            value: 400,
             question: "What is the Stuff answer?",
             attempted: false,
             answers: {
@@ -273,6 +272,7 @@ $(document).ready(function () {
         ]
 
     }
+    var score = 0;
 
 
     $('button.new-game').on('click', function (evt) {
@@ -280,12 +280,12 @@ $(document).ready(function () {
         console.log('clicked')
         //adding category tiles and values
         for (let i = 0; i < questions.categories.length; i++) {
-            $('.main-grid').append("<div class = 'cat-tile'></div>")
-            $('div.cat-tile').eq(i).text(questions.categories[i])
+            $('.main-grid').append("<div class = 'cat-tile'></div>");
+            $('div.cat-tile').eq(i).text(questions.categories[i]);
         }
         //adding board tiles and values
         for (let i = 0; i < manyQuestions.length; i++) {
-            $('.main-grid').append("<div class = divId " + i + "></div>")
+            $('.main-grid').append("<div class = divId " + i + "></div>");
             $('div.divId').eq(i).text(questions.values[i]).on('click', function () {
                 console.log("console log works");
 
@@ -293,17 +293,16 @@ $(document).ready(function () {
                     score = 0
                     let response = prompt(manyQuestions[i].question + manyQuestions[i].answers.t + manyQuestions[i].answers.f)
                     if (response == manyQuestions[i].correctAnswer) {
-                        alert("That's correct!!!")
-                        console.log("Testing!!!!!!!!!!!!!!")
+                        alert("That's correct!!!");
+                        console.log("Testing!!!!!!!!!!!!!!");
 
-                        score = score + questions.values[i]
-
-                            ($('div.score').text(score));
-
+                        score = score + manyQuestions[i].value;
+                        ($('div.score').text(score));
+                        console.log(score);
 
                     } else {
-                        alert("Ohhh... sorry!  That is not correct.")
-                        score = score - questions.values[i]
+                        alert("Ohhh... sorry!  That is not correct.");
+                        score = score - manyQuestions[i].value;
                         $('div.score').text(score);
 
                     }
