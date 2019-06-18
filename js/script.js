@@ -99,7 +99,7 @@ $(document).ready(function () {
             question: "What is the Stuff answer?",
             attempted: false,
             answers: {
-                t: ['\na: What are exit tickets'],
+                t: ['\na: What are exit tickets?'],
                 f: ["\nb: What are change of address forms?",
                     "\nc: What are lunch request forms?",
                     "\nd: What are weekly assignments?"
@@ -187,62 +187,62 @@ $(document).ready(function () {
             divId: 13,
             category: "Science",
             value: 400,
-            question: "What is the science answer?",
+            question: "Having this blood type makes you a universal donor.",
             attempted: false,
             answers: {
-                t: ['\na: This is the correct answer!'],
-                f: ["\nb: This one is wrong.",
-                    "\nc: Also wrong!",
-                    "\nd: Nope not this one either!"
+                t: ['\na: What is type A?'],
+                f: ["\nb: What is type B?",
+                    "\nc: What is type AB?",
+                    "\nd: What is type O?"
                 ]
             },
-            correctAnswer: "a"
+            correctAnswer: "d"
         },
         math400 = {
             divId: 14,
             category: "Math",
             value: 400,
-            question: "What is the math answer?",
+            question: "This type of figure has 20 equal sides.",
             attempted: false,
             answers: {
-                t: ['\na: This is the correct answer!'],
-                f: ["\nb: This one is wrong.",
-                    "\nc: Also wrong!",
-                    "\nd: Nope not this one either!"
+                t: ['\na: What is an icosahedron?'],
+                f: ["\nb: What is a tetrahedron?",
+                    "\nc: What is an octagon?",
+                    "\nd: What is a triangle?"
                 ]
             },
-            correctAnswer: "b"
+            correctAnswer: "a"
 
         },
         gaStuff400 = {
             divId: 15,
             category: "GA Stuff",
             value: 400,
-            question: "What is the Stuff answer?",
+            question: "This occurs on September 11 for SEI 22.",
             attempted: false,
             answers: {
-                t: ['\na: This is the correct answer!'],
-                f: ["\nb: This one is wrong.",
-                    "\nc: Also wrong!",
-                    "\nd: Nope not this one either!"
+                t: ['\na: What is Outcomes Bootcamp?'],
+                f: ["\nb: What is the last day of class?",
+                    "\nc: What is Graduate Showcase?",
+                    "\nd: What is class potluck?"
                 ]
             },
-            correctAnswer: "a"
+            correctAnswer: "c"
         },
         gaStuff400 = {
             divId: 16,
             category: "Potpourri",
             value: 400,
-            question: "What is the Stuff answer?",
+            question: "The 421 B.C. Peace of Nicias was a break in this decades-long war.",
             attempted: false,
             answers: {
-                t: ['\na: This is the correct answer!'],
-                f: ["\nb: This one is wrong.",
-                    "\nc: Also wrong!",
-                    "\nd: Nope not this one either!"
+                t: ['\na: What is WWI?'],
+                f: ["\nb: What is the Frech and Indian war?",
+                    "\nc: What is the Peloponnesian war?",
+                    "\nd: What is the 100 years war?"
                 ]
             },
-            correctAnswer: "b"
+            correctAnswer: "c"
 
         }]
     questions = {
