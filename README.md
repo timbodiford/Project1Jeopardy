@@ -17,7 +17,7 @@ This is a take on the classic Jeopardy game, title with a GA for General Assembl
 If the correct question is selected points are awarded.  The wrong question will REDUCE points.
 
 
-![Initial wireframe image](IMG_5960.HEIC)
+![Initial wireframe image](https://github.com/timbodiford/jeopardy/blob/master/IMG-2847.JPG)
 
 
 ## Future enhancements:
