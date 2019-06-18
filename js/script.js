@@ -4,13 +4,13 @@ $(document).ready(function () {
             divId: 1,
             category: "Science",
             value: 100,
-            question: "What is the science answer?",
+            question: "This bone is the longest in the body.",
             attempted: false,
             answers: {
-                t: ['\na: This is the correct answer!'],
-                f: ["\nb: This one is wrong.",
-                    "\nc: Also wrong!",
-                    "\nd: Nope not this one either!"
+                t: ['\na: What is the femur?'],
+                f: ["\nb: What is the clavicle?",
+                    "\nc: What is the ulna?",
+                    "\nd: What is the ham bone?"
                 ]
             },
             correctAnswer: "a"
@@ -19,13 +19,13 @@ $(document).ready(function () {
             divId: 2,
             category: "Math",
             value: 100,
-            question: "What is the math answer?",
+            question: "9",
             attempted: false,
             answers: {
-                t: ['\na: This is the correct answer!'],
-                f: ["\nb: This one is wrong.",
-                    "\nc: Also wrong!",
-                    "\nd: Nope not this one either!"
+                t: ['\na: What is 4 + 4?'],
+                f: ["\nb: What is the square root of 81?",
+                    "\nc: What is a letter?",
+                    "\nd: What is 5 + 5?"
                 ]
             },
             correctAnswer: "b"
@@ -35,58 +35,58 @@ $(document).ready(function () {
             divId: 3,
             category: "GA Stuff",
             value: 100,
-            question: "What is the Stuff answer?",
+            question: "12 weeks",
             attempted: false,
             answers: {
-                t: ['\na: This is the correct answer!'],
-                f: ["\nb: This one is wrong.",
-                    "\nc: Also wrong!",
-                    "\nd: Nope not this one either!"
+                t: ['\na: What is the amount of time I spent on this project?'],
+                f: ["\nb: How long it took just to write these objects?",
+                    "\nc: Yeah choose another option.",
+                    "\nd: How long does SEI last?"
                 ]
             },
-            correctAnswer: "a"
+            correctAnswer: "d"
         },
         gaStuff100 = {
             divId: 4,
-            category: "Potpourri",
+            category: "Random",
             value: 100,
-            question: "What is the Stuff answer?",
+            question: "Pople are currently using the drive-assit feature in this brand of car to sleep during their commute.",
             attempted: false,
             answers: {
-                t: ['\na: This is the correct answer!'],
-                f: ["\nb: This one is wrong.",
-                    "\nc: Also wrong!",
-                    "\nd: Nope not this one either!"
+                t: ['\na: What is a Ford Pinto?'],
+                f: ["\nb: What is a Honda Pilot?",
+                    "\nc: What is a Tesla?",
+                    "\nd: Whaty is a Pontiac Grand Am?"
                 ]
             },
-            correctAnswer: "b"
+            correctAnswer: "c"
         },
         sci200 = {
             divId: 5,
             category: "Science",
             value: 200,
-            question: "What is the science answer?",
+            question: "This bone located in the ear is the smallest in the body.",
             attempted: false,
             answers: {
-                t: ['\na: This is the correct answer!'],
-                f: ["\nb: This one is wrong.",
-                    "\nc: Also wrong!",
-                    "\nd: Nope not this one either!"
+                t: ['\na: What is the incus?'],
+                f: ["\nb: What is the maleus?",
+                    "\nc: What is the stapes?",
+                    "\nd: Whar is the tympanic membrane?"
                 ]
             },
-            correctAnswer: "a"
+            correctAnswer: "c"
         },
         math200 = {
             divId: 6,
             category: "Math",
             value: 200,
-            question: "What is the math answer?",
+            question: "This is the formula for the Pythagorean Theorem.",
             attempted: false,
             answers: {
-                t: ['\na: This is the correct answer!'],
-                f: ["\nb: This one is wrong.",
-                    "\nc: Also wrong!",
-                    "\nd: Nope not this one either!"
+                t: ['\na: What is a(squared) + b(cubed) = c(1/2)?'],
+                f: ["\nb: What is a(squared) + b(squared) = c(squared)?",
+                    "\nc: What is a + b + c + d(sqaured)?",
+                    "\nd: What is pi?"
                 ]
             },
             correctAnswer: "b"
@@ -94,15 +94,15 @@ $(document).ready(function () {
         },
         gaStuff200 = {
             divId: 7,
-            category: "GA Stuff",
+            category: "These must be completed weekly to provide feedback to the GA Team.",
             value: 200,
             question: "What is the Stuff answer?",
             attempted: false,
             answers: {
-                t: ['\na: This is the correct answer!'],
-                f: ["\nb: This one is wrong.",
-                    "\nc: Also wrong!",
-                    "\nd: Nope not this one either!"
+                t: ['\na: What are exit tickets'],
+                f: ["\nb: What are change of address forms?",
+                    "\nc: What are lunch request forms?",
+                    "\nd: What are weekly assignments?"
                 ]
             },
             correctAnswer: "a"
@@ -111,28 +111,28 @@ $(document).ready(function () {
             divId: 8,
             category: "Potpourri",
             value: 200,
-            question: "What is the Stuff answer?",
+            question: "This Microsoft program was originally called Presenter",
             attempted: false,
             answers: {
-                t: ['\na: This is the correct answer!'],
-                f: ["\nb: This one is wrong.",
-                    "\nc: Also wrong!",
-                    "\nd: Nope not this one either!"
+                t: ['\na: What is MS Word?'],
+                f: ["\nb: What is Skype?",
+                    "\nc: What is CashApp?",
+                    "\nd: What is MS Powerpoint?"
                 ]
             },
-            correctAnswer: "b"
+            correctAnswer: "d"
         },
         sci300 = {
             divId: 9,
             category: "Science",
             value: 300,
-            question: "What is the science answer?",
+            question: "This celestial body was declassified as a planet in August of 2006.",
             attempted: false,
             answers: {
-                t: ['\na: This is the correct answer!'],
-                f: ["\nb: This one is wrong.",
-                    "\nc: Also wrong!",
-                    "\nd: Nope not this one either!"
+                t: ['\na: What is Pluto?'],
+                f: ["\nb: What is the sun?",
+                    "\nc: What is Alpha Centari?",
+                    "\nd: What is New Jersey?"
                 ]
             },
             correctAnswer: "a"
@@ -141,13 +141,13 @@ $(document).ready(function () {
             divId: 10,
             category: "Math",
             value: 300,
-            question: "What is the math answer?",
+            question: "What comes after million, billion, trillion?",
             attempted: false,
             answers: {
-                t: ['\nThis is the correct answer!'],
-                f: ["\nThis one is wrong.",
-                    "\nAlso wrong!",
-                    "\nNope not this one either!"
+                t: ['\na: What is quintillion?'],
+                f: ["\nb: What is quadrillion?",
+                    "\nc: What is googamillion?",
+                    "\nd: What is hexmillion?"
                 ]
             },
             correctAnswer: "b"
@@ -157,28 +157,28 @@ $(document).ready(function () {
             divId: 11,
             category: "GA Stuff",
             value: 300,
-            question: "What is the Stuff answer?",
+            question: "These are the days TAs are available after class.",
             attempted: false,
             answers: {
-                t: ['\na: This is the correct answer!'],
-                f: ["\nb: This one is wrong.",
-                    "\nc: Also wrong!",
-                    "\nd: Nope not this one either!"
+                t: ['\na: What is Mon, Tue, Fri?'],
+                f: ["\nb: What is Tue, Thur, Fri?",
+                    "\nc: What is Wed, Thur, Fri?",
+                    "\nd: What is Tue, Wed, Thur?"
                 ]
             },
-            correctAnswer: "a"
+            correctAnswer: "d"
         },
         gaStuff300 = {
             divId: 12,
             category: "Potpourri",
             value: 300,
-            question: "What is the Stuff answer?",
+            question: "This late night TV host has a segment called carpool karaoke.",
             attempted: false,
             answers: {
-                t: ['\na: This is the correct answer!'],
-                f: ["\nb: This one is wrong.",
-                    "\nc: Also wrong!",
-                    "\nd: Nope not this one either!"
+                t: ['\na: Who is Jimmy Fallon?'],
+                f: ["\nb: Who is James Cordon?",
+                    "\nc: Who is Stephen Colbert?",
+                    "\nd: Who is Jimmy Kimmel?"
                 ]
             },
             correctAnswer: "b"
@@ -250,33 +250,33 @@ $(document).ready(function () {
             "Science",
             "Math",
             "GA Stuff",
-            "Not sure yet"
-        ],
-        values: [
-            100,
-            100,
-            100,
-            100,
-            200,
-            200,
-            200,
-            200,
-            300,
-            300,
-            300,
-            300,
-            400,
-            400,
-            400,
-            400
+            "Random"
         ]
+        // values: [
+        //     100,
+        //     100,
+        //     100,
+        //     100,
+        //     200,
+        //     200,
+        //     200,
+        //     200,
+        //     300,
+        //     300,
+        //     300,
+        //     300,
+        //     400,
+        //     400,
+        //     400,
+        //     400
+        // ]
 
     }
-    var score = parseInt(0)
+    var score = parseInt(0);
 
     $('button.new-game').on('click', function (evt) {
-        evt.preventDefault()
-        console.log('clicked')
+        evt.preventDefault();
+        console.log('clicked');
         //adding category tiles and values
         for (let i = 0; i < questions.categories.length; i++) {
             $('.instructSection').remove();
@@ -339,7 +339,7 @@ $(document).ready(function () {
 
 
                 }
-                ($('div.divId').eq(i).text(""))
+                ($('div.divId').eq(i).text(""));
                 if (manyQuestions[i].attempted === true) {
                     return;
                 }

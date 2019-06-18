@@ -4,9 +4,7 @@ font-family: 'Boogaloo', cursive; */
 body {
     font-family: 'Boogaloo', cursive;
 }
-header {
 
-}
 .score {
     display: flex;
     flex-direction: row;
